@@ -257,7 +257,11 @@ Paginator.prototype.drawPages = function(){
 		if(cellCurrentValue == this.inputData.pageCurrent){
 			html = "<span>" + "<strong>" + cellCurrentValue + "</strong>" + "</span>";
 		} else {
-			html = "<span>" + "<a href='" + this.inputData.baseUrl + cellCurrentValue + "'>" + cellCurrentValue + "</a>" + "</span>";
+            // if baseUrl is function
+            var url = (typeof this.inputData.baseUrl == 'function')
+                ? this.inputData.baseUrl(cellCurrentValue)
+                : this.inputData.baseUrl + cellCurrentValue;
+            html = "<span>" + "<a href='" + url + "'>" + cellCurrentValue + "</a>" + "</span>";
 		}
 		this.html.tdsPages[i].innerHTML = html;
 	}

@@ -20,11 +20,11 @@ Was previously posted [here](http://karaboz.ru/2007/11/19/paginator-3000-postran
   <div class="paginator" id="paginator_example"></div>
   <script type="text/javascript">
   	paginator_example = new Paginator(
-  		"paginator_example", // id контейнера, куда ляжет пагинатор
-  		2048, // общее число страниц
-  		10, // число страниц, видимых одновременно
-  		300, // номер текущей страницы
-  		"http://www.yourwebsite.com/pages/" // url страниц
+  		"paginator_example", // id of the container where the paginator will be placed (id контейнера, куда ляжет пагинатор)
+  		2048, // total number of pages (общее число страниц)
+  		10, // number of pages visible at the same time (число страниц, видимых одновременно)
+  		300, // current page number (номер текущей страницы)
+  		"http://www.yourwebsite.com/pages/" // page URL (URL страницы)
   	);
   </script>
 </body>
